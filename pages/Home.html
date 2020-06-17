@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奶茶加点糖-首页</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div>
+                <span class="iconfont iconnaichabeizi"></span>
+                <span class="title">奶茶加点糖</span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="./Home.html">首页</a></li>
+                    <li><a href="./News.html">新闻</a></li>
+                    <li><a href="./About.html">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- 轮播图 -->
+    <div class="banner">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <!-- 指示符 -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- 轮播图片 -->
+            <div class="carousel-inner" id="bannerItem">
+                <div class="carousel-item active">
+                    <img src="../image/4.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="../image/1.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="../image//3.jpg">
+                </div>
+            </div>
+
+            <!-- 左右切换按钮 -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 内容 -->
+    <div class="article">
+        <div class="main-content">
+            <div class="advice">
+                <h3>良心推荐</h3>
+                <!-- <div class="advice-box"> -->
+                <div class="adviceOne">
+                    <h4>美味茶品</h4>
+                    <div id="menu1">
+                        <div class="food">
+                            <img src="../image/advice1.jpg" alt="" class="food-img">
+                            <div class="food-info">
+                                <p style="text-align: center;margin-top: 10px;font-weight: bold;">
+                                    芝芝芒芒</p>
+                            </div>
+                        </div>
+                        <div class="food">
+                            <img src="../image/advice2.jpg" alt="" class="food-img">
+                            <div class="food-info">
+                                <p style="text-align: center;margin-top:10px;font-weight: bold;">脏脏茶</p>
+
+                            </div>
+                        </div>
+                        <div class="food">
+                            <img src="../image/advice3.jpg" alt="" class="food-img">
+                            <div class="food-info">
+                                <p style="text-align: center;margin-top: 10px;font-weight: bold;">芝芝莓莓</p>
+                            </div>
+                        </div>
+                        <div class="food">
+                            <img src="../image/advice4.jpg" alt="" class="food-img">
+                            <div class="food-info">
+                                <p style="text-align: center;margin-top: 10px;font-weight: bold;">盆栽奶茶</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="adviceTwo">
+                    <h4>好吃甜品</h4>
+                    <div id="menu2">
+                        <div class="food">
+                            <img src="../image/advice5.jpg" alt="" class="food-img">
+                            <div class="food-info">
+                                <p style="text-align: center;margin-top: 10px;font-weight: bold;">马卡龙</p>
+                            </div>
+                        </div>
+                        <div class="food">
+                            <img src="../image/advice6.jpg" alt="" class="food-img">
+                            <div class="food-info">
+                                <p style="text-align: center;margin-top: 10px;font-weight: bold;">草莓甜心</p>
+                            </div>
+                        </div>
+                        <div class="food">
+                            <img src="../image/advice7.jpg" alt="" class="food-img">
+                            <div class="food-info">
+                                <p style="text-align: center;margin-top: 10px;font-weight: bold;">芝士糕点</p>
+                            </div>
+                        </div>
+                        <div class="food">
+                            <img src="../image/advice8.jpg" alt="" class="food-img">
+                            <div class="food-info">
+                                <p style="text-align: center;margin-top: 10px;font-weight: bold;">黑森林</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="goodness">
+            <h3>产品优势</h3>
+            <ul>
+                <li>
+                    <span class="iconfont iconyouhui"></span>
+                    价格美丽
+                </li>
+                <li>
+                    <span class="iconfont iconbaokuan"></span>
+                    超多爆款
+                </li>
+                <li>
+                    <span class="iconfont iconnaicha1"></span>
+                    口味纯正
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="iconfont iconxiangmutuandui"></span>
+                    专业团队
+                </li>
+                <li>
+                    <span class="iconfont iconpinpai"></span>
+                    品牌悠久
+                </li>
+
+                <li>
+                    <span class="iconfont iconfuwu1"></span>
+                    服务周到
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- 底部内容 -->
+    <div class=" footer">
+        <div class="footerContent">
+            <div class="connect">
+                <h4><span class="iconfont icondianhua"></span>联系我们</h4>
+                <ul class="connectDetail">
+                    <li class="iconfont  icondizhi">&nbsp;福州市闽侯县上街镇中海寰宇</li>
+                    <li class="iconfont iconyouxiang">&nbsp;hututu@qq.com</li>
+                    <li class="iconfont icondianhua">&nbsp;400-123-4569</li>
+                </ul>
+            </div>
+            <div class="saoma">
+                <h4><span class="iconfont iconsaoma"></span>扫码进店</h4>
+                <span>
+                    <img src="../image/saoma.png" alt="" class="scan" id="scanImg">
+                    <p style="width:80px;text-align: center;margin-top: 10px;">奶茶加点甜</p>
+                </span>
+
+            </div>
+            <div class="notice">
+                <h4><span class="iconfont iconguanzhu1"></span>关注我们</h4>
+                <ul class="foot-subscript">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul><br>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+</html>
