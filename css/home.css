@@ -1,7 +1,7 @@
 /* 头部 */
 
 body, html {
-    min-width: 2000px;
+    min-width: 1200px;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -73,8 +73,7 @@ li a:hover {
 
 #bannerItem {
     margin: 0 auto;
-    /* width: 1550px; */
-    /* height: 600px; */
+    min-width: 1200px;
 }
 
 #bannerItem img {
