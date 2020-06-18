@@ -17,7 +17,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
     <link rel="stylesheet" href="../font/iconfont.css">
-    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css" />
 </head>
 
 <body>
@@ -39,8 +39,7 @@
 
     </div>
     <!-- 内容 -->
-    <div style="display: none;margin: 100px auto;text-align: center;font-size: 30px;" id="loading">加载中.....</div>
-    <div class="news" id = "news" style="display: block;">
+    <div class="news">
         <div class="newsList">
             <h2 style="text-align: center;margin: 20px;font-weight: bold;">生活小常识</h2>
             <div id="boxIn">
@@ -121,46 +120,38 @@
         </div>
     </div>
 </body>
+<!-- 进度条 -->
 <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
 <script>
     $(function () {
         function getPage(page) {
             const loadingBar = $(".loading-bar");
             NProgress.start();
-            console.log(loadingBar)
-            // 拿到数据之前 设置Loading状态true
-            // $("#loading").css('display','block')
-            // $("#news").css('display','none')
-
-            //   console.log($("#loaing").css)
             axios.get('https://mock-api.com/Gzq27OgW.mock/list?page=' + page)
                 .then(function (res) {
                     var resData = res.data;
-                     $.each(resData, function (index, ele) {
+                    $.each(resData, function (index, ele) {
                         $('.newsBox').eq(index).find('img').prop('src', ele.img)
                         $('.newsBox').eq(index).find('.title').html(ele.title)
                         $('.newsBox').eq(index).prop('href', `NewsDetail.html?id=${ele.id}`);
 
                     })
-                    // $("#loading").css('display','none')
-                    // $("#news").css('display','block')
-                     // 拿到数据之后，设置loading状态false
-                     NProgress.done();
+
+                    // 拿到数据之后，设置loading状态false
+                    NProgress.done();
 
                 }).catch(function (res) {
                     console.log('error', res);
-                    $("#loading").css('display','block')
+                    $("#loading").css('display', 'block')
                     NProgress.done();
                 })
         }
         $('#pn li a').click(function () {
-            
             $('.boxIn').html('');
             const pageNum = parseInt($(this).text())
-            console.log(pageNum)
+            console.log("sss")
             getPage(pageNum);
-           
-            
+            return false;
 
 
         });
